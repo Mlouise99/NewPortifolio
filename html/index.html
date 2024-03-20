@@ -1,27 +1,64 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPortfolio</title>
-      <script src="https://cdn.tailwindcss.com"></script>
-     <link href="../src/output.css" rel="stylesheet">
-    
-   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom styles for the mobile menu */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+
+            .mobile-menu-open {
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-gray-200">
+    <!-- Mobile menu start -->
+    <div class="mobile-menu bg-gray-100 p-4 text-gray-800">
+        <div class="text-center mb-4">
+            <a href="#" class="text-3xl font-bold">Mlouise</a>
+        </div>
+        <ul class="space-y-2">
+            <li><a href="#home" class="block py-2 px-4 rounded-md bg-white font-semibold">Home</a></li>
+            <li><a href="#about" class="block py-2 px-4 rounded-md bg-white font-semibold">About</a></li>
+            <li><a href="#service" class="block py-2 px-4 rounded-md bg-white font-semibold">Skills</a></li>
+            <li><a href="#portfolio" class="block py-2 px-4 rounded-md bg-white font-semibold">Project</a></li>
+            <li><a href="#contact" class="block py-2 px-4 rounded-md bg-white font-semibold">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Mobile menu end -->
+
     <!-- Main container start -->
-    <div class="flex ">
+    <div class="flex">
         <!-- Aside start -->
-        <div class="w-64 bg-gray-100 p-8 h-screen sticky top-0">
+        <div class="desktop-menu w-64 bg-gray-100 p-8 h-screen sticky top-0">
             <div class="text-center mb-8">
                 <a href="#" class="text-3xl font-bold text-gray-800">
                     <span>M</span>louise
                 </a>
             </div>
             <ul class="space-y-4 mt-44">
-                <li><a href="#home" class="block py-2 px-4 rounded-md  bg-white text-gray-800 font-semibold"><i
+                <li><a href="#home" class="block py-2 px-4 rounded-md bg-white text-gray-800 font-semibold"><i
                             class="fas fa-home mr-2"></i>Home</a></li>
                 <li><a href="#about" class="block py-2 px-4 rounded-md bg-white text-gray-800 font-semibold"><i
                             class="fas fa-user mr-2"></i>About</a></li>
@@ -41,21 +78,21 @@
             <section class="home section" id="home">
                 <div class="container mx-auto mt-36 mb-72">
                     <div class="flex items-center justify-between">
-                        <div class="w-1/2 pl" >
+                        <div class="w-1/2 pl">
                             <h3 class="text-2xl font-bold mb-4">Hello, my name is <span
                                     class="text-primary font-semibold text-orange-400">Mwubahamana Louise</span></h3>
                             <h3 class="text-3xl font-bold mb-4">I'm a <span class="text-primary font-semibold  text-orange-400">front-end
                                     developer</span></h3>
-                            <p class="text-lg text-gray-700 mb-16" >I'm intrigued by software development and video editing, and
+                            <p class="text-lg text-gray-700 mb-16">I'm intrigued by software development and video editing, and
                                 I'm a curious person about various technology-related fields such as cybersecurity and
                                 artificial intelligence.</p>
-                                <a href="#about" class="bg-orange-500 mt-20 text-white  px-6 py-2 rounded-lg shadow-md hover:bg-cyan-400 hover:text-slate-400 transition duration-300 ease-in-out">
-                                    More About Me
-                                </a>
+                            <a href="#about"
+                                class="bg-orange-500 mt-20 text-white  px-6 py-2 rounded-lg shadow-md hover:bg-cyan-400 hover:text-slate-400 transition duration-300 ease-in-out">
+                                More About Me
+                            </a>
                         </div>
-                        <div class="w-1/2" >
-                            <img src="../bc.jpeg" alt="" class="w-auto h-96 pl-44 ">
-
+                        <div class="w-1/2">
+                            <img src="../bc.jpeg" alt="" class="w-auto h-96 pl-44">
                         </div>
                     </div>
                 </div>
@@ -65,7 +102,9 @@
             <section class="about section" id="about">
                 <div class="container mx-auto py-12 mt-16  ">
                     <div class="section-title">
-                        <h2 class="text-3xl font-bold mb-7">About Me</h2>
+                        <h2 class="text-3xl font-bold">About Me</h2>
+                        <p class="bg-orange-500 h-1   mb-1 " style="width:4%;"></p> 
+                <p class="bg-orange-500 h-1  mb-7" style="width:2%;"></p>
                     </div>
                     <!-- grid-cols-1 md:grid-cols-2 gap-8 -->
                     <div class="grid   ">
@@ -80,7 +119,7 @@
                                 it's trying out new computer languages or testing out new software, I enjoy learning and
                                 keeping my skills sharp in the fast-changing world of technology.</p>
                         </div>
-                        <div class="personal-info mt-20 flex ">
+                        <div class="personal-info mt-20 flex " id="">
                             <div class="grid grid-cols-1 w-full">
                                 <div class="info-item border-b border-gray-300 p-2 w-full">
                                     <p>Birthday : <span>29 March 1999</span></p>
@@ -208,219 +247,227 @@
             </section>
              <!-- About Section end -->
               <!-- Skills Section start -->
-              <section class="service section " id="service">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Skills</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
-                                <h4>Web Designer</h4> 
-                                <p> To make an installation, configurations and maintenance for CCTV Camera, Fingerprint access control time and attendance and video intercom and do anything about computer networking and maintenance.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-bullhorn"></i>
-                                </div>
-                                <h4>CCTV Camera System</h4> 
-                                <p> To make an installation, configurations and maintenance for CCTV Camera, Fingerprint access control time and attendance and video intercom and do anything about computer networking and maintenance.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa-solid fa-building-shield"></i>
-                                </div>
-                                <h4>cybersecurity</h4>
-                                <p> Skills for cybersecurity where can I make configuration of access control and and setting security principles.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fab fa-product-hunt"></i>
-                                </div>
-                                <h4>Adobe Premiere Pro</h4>
-                                <p>I have one year of experience in video editing, utilizing Adobe Premiere Pro to create trailers for various videos and produce wedding ceremony video.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
-                                <h4>Network Engineering</h4>
-                                <p>I have some experience in computer networking such making subnetting about network for enhance performance of network.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fab fa-product-hunt"></i>
-                                </div>
-                                <h4>Network Engineering</h4>
-                                <p>I have some experience in computer networking such making subnetting about network for enhance performance of network.</p>
-                            </div>
-                        </div>
-                    </div>
+              <!-- Skills Section start -->
+<section class="service section" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="section-title p-4">
+                <h2 class="font-bold text-3xl">Skills</h2>
+                <p class="bg-orange-500 h-1 mb-1 " style="width:4%;"></p> 
+                <p class="bg-orange-500 h-1 " style="width:2%;"></p>
+               
+            </div>
+             
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500  "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                      </svg>
+                      
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center ">Web Designer</h4>
+                    <p class="text-gray-700">To make an installation, configurations and maintenance for CCTV Camera, Fingerprint access control time and attendance and video intercom and do anything about computer networking and maintenance.</p>
                 </div>
-              </section>
+                
+            </div>
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="5" y="3" width="14" height="6" rx="2" />  <path d="M19 6h1a2 2 0 0 1 2 2a5 5 0 0 1 -5 5l-5 0v2" />  <rect x="10" y="15" width="4" height="6" rx="1" /></svg>
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center">CCTV Camera System</h4>
+                    <p class="text-gray-700">To make an installation, configurations and maintenance for CCTV Camera, Fingerprint access control time and attendance and video intercom and do anything about computer networking and maintenance.</p>
+                </div>
+                
+            </div>
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center">CyberSecurity</h4>
+                    <p class="text-gray-700">Skills for cybersecurity where can I make configuration of access control and and setting security principles.</p>
+                </div>
+                
+            </div>
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                      
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center">Fundamental of Network Engineering</h4>
+                    <p class="text-gray-700">I have some experience in computer networking such making subnetting about network for enhance performance of network</p>
+                </div>
+                
+            </div>
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></svg>
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center">Video Editing</h4>
+                    <p class="text-gray-700">I have one year of experience in video editing, utilizing Adobe Premiere Pro to create trailers for various videos and produce wedding ceremony video.</p>
+                </div>
+                
+            </div>
+            <div class="service-item p-4">
+                <div class="service-item-inner bg-gray-100 border border-gray-300 rounded-lg p-6 transition-shadow hover:shadow-lg">
+                    <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></svg>
+                    <h4 class="text-lg font-semibold mt-4 mb-2 text-center">Video Editing</h4>
+                    <p class="text-gray-700">I have one year of experience in video editing, utilizing Adobe Premiere Pro to create trailers for various videos and produce wedding ceremony video.</p>
+                </div>
+                
+            </div>
+            <!-- Repeat for other service items -->
+        </div>
+    </div>
+</section>
+<!-- Skills Section end -->
+
               <!-- Skills Section end -->
               <!-- Portfolio start -->
-              <section class="portfolio section " id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Project</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects:
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="https://mlouise99.github.io/MeetAdev/">  <img src="port.png" alt=""></a>
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="https://mlouise99.github.io/Food-blog/"><img src="food.png" alt=""></a>
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="https://mlouise99.github.io/Age-calculator/"><img src="age.png" alt=""></a>
-                                    
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="https://mlouise99.github.io/Rock-paper-javascript/">  <img src="rock.png" alt=""></a>
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href=""> <img src="br.png" alt=""></a>
-                                    
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="https://mlouise99.github.io/Rock-paper-javascript/">  <img src="rock.png" alt=""></a>
-                        
-                                </div>
-
-                            </div>
-                        </div>
+            <!-- Portfolio Section start -->
+<section class="portfolio section" id="portfolio">
+    <div class="container mb-7" >
+        <div class="row">
+            <div class="section-title py-4 ">
+                <h2 class="font-bold text-3xl mb-1">Project</h2>
+                <p class="bg-orange-500 h-1 mb-1 " style="width:4%;"></p> 
+                <p class="bg-orange-500 h-1 " style="width:2%;"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="portfolio-heading py-4">
+                <h2 class="font-bold text-3xl">My Last Projects:</h2>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/MeetAdev/"><img src="../port.png" alt=""></a>
                     </div>
                 </div>
-              </section>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/Food-blog/"><img src="../food.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/Age-calculator/"><img src="../age.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/Rock-paper-javascript/"><img src="../rock.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/shecancode/"><img src="../br.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-inner border-4 border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                    <div class="portfolio-img">
+                        <a href="https://mlouise99.github.io/Rock-paper-javascript/"><img src="../rock.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other portfolio items -->
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section end -->
+
               <!-- Portfolio End -->
               <!-- Contact start -->
-              <section class="contact section" id="contact" >
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
+          <!-- Contact Section start -->
+<section class="contact section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="section-title py-4">
+                <h2 class="font-bold text-4xl">Contact Me</h2>
+                <p class="bg-orange-500 h-1 mb-1 " style="width:4%;"></p> 
+                <p class="bg-orange-500 h-1  " style="width:2%;"></p>
+            </div>
+        </div>
+        <h3 class="contact-title text-orange-500  font-bold text-3xl text-center mb-6">Have You Any Question?</h3>
+        <h4 class="contact-sub-title font-bold text-center mb-10" >I'M AT YOUR SERVICES</h4>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Contact information -->
+            <div class="contact-info-item">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                <h4>Call Me On</h4>
+                <p>+250 786 033 124</p>
+            </div>
+            <div class="contact-info-item">
+                <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />  <circle cx="12" cy="10" r="3" /></svg>
+                <h4>Office</h4>
+                <p>Home</p>
+            </div>
+            <div class="contact-info-item">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <svg class="h-8 w-8 text-orange-500 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
+                <h4>Email</h4>
+                <p>mwlouise99@gmail.com</p>
+            </div>
+            <div class="contact-info-item">
+                <svg class="h-8 w-8 text-orange-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="14.31" y1="8" x2="20.05" y2="17.94" />  <line x1="9.69" y1="8" x2="21.17" y2="8" />  <line x1="7.38" y1="12" x2="13.12" y2="2.06" />  <line x1="9.69" y1="16" x2="3.95" y2="6.06" />  <line x1="14.31" y1="16" x2="2.83" y2="16" />  <line x1="16.62" y1="12" x2="10.88" y2="21.94" /></svg>
+                <h4>Website</h4>
+                <p>https://github/Mlouise99/</p>
+            </div>
+        </div>
+        <h3 class="contact-title  text-orange-500  font-bold text-3xl text-center mt-12">SEND ME AN EMAIL</h3>
+        <h4 class="contact-sub-title font-bold text-center mt-7 ">I'M VERY RESPONSIVE AT MESSAGES</h4>
+        <div class="grid grid-cols-1">
+            <div class="contact-form">
+                <div class="row flex gap-6">
+                    <div class="form-item col-6 py-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control rounded-2xl h-10 w-96 bg-slate-100" placeholder="Name">
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15"> Have You Any Question?</h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4> 
-                    <div class="row">
-                        <!-- contact information -->
-                        <div class="contact-info-item padd-15 ">
-                            <div class="icon"> <i class="fa fa-phone"></i></div>
-                            <h4>Call Me On</h4>
-                            <p>+250 786 033 124</p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-map-marker-alt"></i></div>
-                            <h4>Office</h4>
-                            <p>Home</p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p>mwlouise99@gmail.com</p>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"> <i class="fa fa-globe-europe"></i></div>
-                            <h4>Website</h4>
-                            <p>https://github/Mlouise99/</p>
+                    <div class="form-item col-6 py-4 w-full">
+                        <div class="form-group ">
+                            
+                            <input type="email" class="form-control  rounded-2xl h-10 w-full bg-slate-100" placeholder="Email">
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15"> SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE AT MESSAGES</h4> 
-                    <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item  col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="form-item  col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item  col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item  col-12 padd-15">
-                                    <div class="form-group">
-                                       <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item  col-12 padd-15">
-                                    <button type="submit" class="btn">Send Message</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    
                 </div>
-              </section>
+                <div class="row">
+                    <div class="form-item col-12 py-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control  rounded-2xl h-10 w-full bg-slate-100 " placeholder="Subject">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 py-4">
+                        <div class="form-group">
+                            <textarea name="" class="form-control  rounded-2xl h-40 w-full bg-slate-100" id="" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 py-4">
+                        <button type="submit" class="btn bg-orange-500 m text-white  px-6 py-2 rounded-lg shadow-md hover:bg-cyan-400 hover:text-slate-400 transition duration-300 ease-in-out ">Send Message</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section end -->
+
         
                 
               <!-- Contact end -->
@@ -430,27 +477,110 @@
      <!-- main content end -->
  </div>
  <!--  ====main container end ========-->
-
+<!-- 
  <!-- style switcher start -->
  <div class="style-switcher">
-    <div class="style-switcher-toggler s-icon">
-        <i class="fas fa-cog fa-spin"></i>
+    <div class="dark" ></div>
+    <button id="darkModeToggle" class="dark-mode-toggle" onclick="toggleDarkMode()" >Toggle Dark Mode</button>
+
+
+    <div class="style-switcher-toggler right-0 mr-11 mt-4 s-icon absolute h-10 w-10 flex items-center justify-center top-0 text-xl bg-slate-100 border border-gray-200 text-gray-900 rounded-full cursor-pointer transition-transform transform translate-x-full" onclick="toggleStyleSwitcher()">
+        <i class="fas fa-cog fa-spin text-xl"></i>
+
     </div>
-    <div class="day-night s-icon">
-        <i class="fas fa-moon "></i>
+    <div class="day-night s-icon absolute right-0 mr-11 mt-4 h-10 w-10 flex items-center justify-center text-xl bg-slate-100 border border-gray-200 text-gray-900 rounded-full cursor-pointer transition-transform transform translate-x-full top-14" onclick="toggleDarkMode()">
+        <i class="fa fa-moon text-xl"></i>
     </div>
-    <h4>Theme Colors</h4>
-    <div class="colors">
-       <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-       <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-       <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-       <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-       <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    <h4 class="text-gray-700 text-base">Theme Colors</h4>
+    <div class="colors flex flex-wrap justify-between mt-2 top-96">
+        <span class="color-1 w-8 h-8 rounded-full bg-red-600" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2 w-8 h-8 rounded-full bg-orange-500" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3 w-8 h-8 rounded-full bg-teal-500" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4 w-8 h-8 rounded-full bg-blue-600" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5 w-8 h-8 rounded-full bg-pink-500" onclick="setActiveStyle('color-5')"></span>
     </div>
- </div>
+</div> 
+
+
+
+<script>
+   const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
+styleSwitcherToggle.addEventListener("click", () => {
+    document.querySelector(".style-switcher").classList.toggle("translate-x-0");
+})
+
+// Hide style switcher on scroll
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("translate-x-0")) {
+        document.querySelector(".style-switcher").classList.remove("translate-x-0");
+    }
+})
+
+// Theme color functionality
+const alternateStyles = document.querySelectorAll(".alternate-style");
+function setActiveStyle(color) {
+    alternateStyles.forEach((style) => {
+        if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        } else {
+            style.setAttribute("disabled", "true");
+        }
+    })
+}
+
+const dayNight = document.querySelector(".day-night");
+dayNight.addEventListener("click", () => {
+    dayNight.querySelector("i").classList.toggle("fa-sun");
+    dayNight.querySelector("i").classList.toggle("fa-moon");
+    document.body.classList.toggle("dark");
+})
+
+window.addEventListener("load", () => {
+    if (document.body.classList.contains("dark")) {
+        dayNight.querySelector("i").classList.add("fa-sun");
+    } else {
+        dayNight.querySelector("i").classList.add("fa-moon");
+    }
+})
+const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+        const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
+const colorOptions = document.querySelectorAll(".colors span");
+const textElements = document.querySelectorAll(".text-color-change");
+
+styleSwitcherToggle.addEventListener("click", () => {
+    document.querySelector(".style-switcher").classList.toggle("open");
+});
+
+// Attach event listeners to color options
+colorOptions.forEach(colorOption => {
+    colorOption.addEventListener("click", () => {
+        const color = colorOption.classList[0]; // Get the color class
+        applyColor(color);
+    });
+});
+
+// Function to apply selected color to text elements
+function applyColor(color) {
+    textElements.forEach(textElement => {
+        textElement.classList.remove("text-red-600", "text-orange-500", "text-teal-500", "text-blue-600", "text-pink-500");
+        textElement.classList.add(color); // Apply the selected color class
+    });
+}
+
+
+
+</script>
+
+
+
+
   <!-- style switcher end -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-    <script src="style-switcher.js"></script>
+
+  
 </body>
 </html> 

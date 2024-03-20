@@ -558,3 +558,32 @@ video {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
 }
+/* Inside tailwind.css */
+/* Tailwind CSS rules */
+
+/* Dark mode styles */
+.dark {
+  background: rgb(237, 9, 9); /* Change to your desired dark mode background color */
+  color: #f7fafc; /* Change to your desired dark mode text color */
+}
+
+/* Theme colors */
+.theme-red {
+  --theme-color: #ec1839;
+}
+
+.theme-orange {
+  --theme-color: #fa5b0f;
+}
+
+.theme-teal {
+  --theme-color: #020000;
+}
+
+.theme-blue {
+  --theme-color: #1854b4;
+}
+
+.theme-pink {
+  --theme-color: #f021b2;
+}
